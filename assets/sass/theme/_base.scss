@@ -1,9 +1,28 @@
 p {
     font-family: $font-text;
 }
-
 nav {
     a {
         font-size: $nav-height;
     }
+}
+
+.font-green {
+    color: $primary-color;
+}
+
+h1, h2, h3{
+   font-family: $font-title;
+}
+
+h1 {
+    font-size: $h1-desktop;
+}
+
+h2 {
+    font-size: $h2-desktop;
+}
+
+h3 {
+    font-size: $h3-desktop;
 }

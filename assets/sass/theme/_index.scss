@@ -1,0 +1,58 @@
+.banner-header {
+    background: no-repeat url(../../../public/img/banniere_desktop.jpg)
+      center/cover;
+    max-width: 1920px;
+    height: 100vh;
+  }
+
+.top-index {
+    h1 {
+        text-align: center;
+        margin: 6rem 0;
+    }
+}
+
+.container-index{
+    display: flex;
+    margin: 2rem auto;
+    max-width: 1280px;
+   
+    .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+            padding: 0 2rem;
+        }
+
+        h3 {
+            color: $primary-color;
+            text-align: center;
+        }
+    } 
+    .img-content {
+        height: 400px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 40px;
+        }
+    }
+}
+
+#methodes {
+    margin: 6rem 0;
+
+    .methodes {
+        margin-bottom: 6rem;
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+
