@@ -1,0 +1,48 @@
+header {
+  position: absolute;
+  width: 100%;
+
+  .bando {
+    padding: 1rem;
+    background-color: $primary-color;
+
+    p {
+      text-align: center;
+      color: white;
+    }
+  }
+  .nav-blur {
+    //   filter: blur(2px);
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      background-color: rgba($color: #fff, $alpha: 0.5);
+
+      .logo-header {
+        height: 200px;
+
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      a {
+        font-size: $nav-height;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: black;
+        font-family: $font-title;
+      }
+    }
+  }
+}
+
+.banner-header {
+  background: no-repeat url(../../../public/img/banniere_desktop.jpg)
+    center/cover;
+  max-width: 1920px;
+  height: 100vh;
+}
