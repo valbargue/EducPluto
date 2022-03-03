@@ -8,11 +8,10 @@
 			<div class="logo-header">
 				<img src=" {{ asset('/img/logo.jpeg') }}" alt="logo du site">
 			</div>
-			<a href="#">Accueil</a>
-			<a href="#">Prestation</a>
-			<a href="#">Galerie</a>
-			<a href="#">Blog</a>
-			<a href="#">Contactez-nous</a>
+			<a href="{{ path('app_index') }}">Accueil</a>
+			<a href="{{ path('app_prestation') }}">Prestation</a>
+			<a href="{{ path('app_blog') }}">Blog</a>
+			<a href="{{ path('app_rdv') }}">Prendre RDV</a>
 		</nav>
 	</div>
 

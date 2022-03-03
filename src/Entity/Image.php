@@ -28,10 +28,6 @@ class Image
     
     private $prestation;
 
-    /**
-     * @ORM\ManyToOne(targetEntity=Article::class, inversedBy="image")
-     */
-    private $article;
 
     public function getId(): ?int
     {
@@ -46,30 +42,6 @@ class Image
     public function setName(string $name): self
     {
         $this->name = $name;
-
-        return $this;
-    }
-
-    public function getPrestation(): ?Prestation
-    {
-        return $this->prestation;
-    }
-
-    public function setPrestation(?Prestation $prestation): self
-    {
-        $this->prestation = $prestation;
-
-        return $this;
-    }
-
-    public function getArticle(): ?Article
-    {
-        return $this->article;
-    }
-
-    public function setArticle(?Article $article): self
-    {
-        $this->article = $article;
 
         return $this;
     }
