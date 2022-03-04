@@ -33,10 +33,5 @@ class AppController extends AbstractController {
     public function rdv(): Response {
         return $this->render('app/rdv.html.twig');
     }
-    /**
-     * @Route("/admin", name="app_admin")
-     */
-    public function admin(): Response {
-        return $this->render('app/admin.html.twig');
-    }
+
 }

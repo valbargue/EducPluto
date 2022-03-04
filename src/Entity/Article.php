@@ -49,6 +49,11 @@ class Article
      */
     private $updatedAt;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Category::class, inversedBy="name")
+     */
+    private $category;
+
 
     public function getId(): ?int
     {
@@ -124,6 +129,18 @@ class Article
     public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function getCategory(): ?Category
+    {
+        return $this->category;
+    }
+
+    public function setCategory(?Category $category): self
+    {
+        $this->category = $category;
 
         return $this;
     }
