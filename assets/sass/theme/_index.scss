@@ -14,7 +14,7 @@
 
 .container-index{
     display: flex;
-    margin: 2rem auto;
+    margin: 3rem auto;
     max-width: 1280px;
    
     .content {
@@ -33,7 +33,8 @@
         }
     } 
     .img-content {
-        height: 400px;
+        width: 50%;
+
 
         img {
             height: 100%;

@@ -24,11 +24,6 @@ class Prestation
      */
     private $title;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Image::class, mappedBy="prestation")
-     */
-
-    private $resumeDesc;
 
     /**
      * @ORM\Column(type="text")
@@ -50,6 +45,16 @@ class Prestation
      */
     private $duration;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $resume;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image;
+
 
     public function getId(): ?int
     {
@@ -69,18 +74,6 @@ class Prestation
     }
 
 
-
-    public function getResumeDesc(): ?string
-    {
-        return $this->resumeDesc;
-    }
-
-    public function setResumeDesc(string $resumeDesc): self
-    {
-        $this->resumeDesc = $resumeDesc;
-
-        return $this;
-    }
 
     public function getDescription(): ?string
     {
@@ -126,6 +119,30 @@ class Prestation
     public function setDuration(string $duration): self
     {
         $this->duration = $duration;
+
+        return $this;
+    }
+
+    public function getResume(): ?string
+    {
+        return $this->resume;
+    }
+
+    public function setResume(string $resume): self
+    {
+        $this->resume = $resume;
+
+        return $this;
+    }
+
+    public function getImage(): ?string
+    {
+        return $this->image;
+    }
+
+    public function setImage(string $image): self
+    {
+        $this->image = $image;
 
         return $this;
     }

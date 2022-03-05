@@ -1,0 +1,10 @@
+#prestation {
+    margin: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    .card-prestation {
+        text-align: center;
+        width: 60%;
+    }
+}
