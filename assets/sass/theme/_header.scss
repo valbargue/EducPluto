@@ -2,15 +2,7 @@ header {
   position: absolute;
   width: 100%;
 
-  .bando {
-    padding: 1rem;
-    background-color: $primary-color;
 
-    p {
-      text-align: center;
-      color: white;
-    }
-  }
   .nav-blur {
     //   filter: blur(2px);
     nav {
@@ -26,7 +18,7 @@ header {
         img {
           height: 100%;
           width: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
 
