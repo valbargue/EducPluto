@@ -1,10 +1,15 @@
 footer {
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 
     p {
         text-align: center;
         color: #fff;
+        display: inline-block;
+        margin: 0!important;
 
         a {
             color: black;

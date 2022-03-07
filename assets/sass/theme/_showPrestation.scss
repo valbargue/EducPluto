@@ -1,0 +1,34 @@
+#content-prestation {
+    margin: 4rem 0;
+
+    .content-prestation {
+
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .subtitle-showPrestation {
+            font-family: $font-title;
+            font-size: $h3-desktop;
+            text-align: center;
+            color: $primary-color;
+            margin-bottom: 4rem;
+        }
+
+        .description-showPrestation {
+            font-family: $font-text;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 4rem;
+        }
+
+        .price-showPrestation {
+            font-family: $font-text;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

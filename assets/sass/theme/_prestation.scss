@@ -1,3 +1,13 @@
+.banner-prestation {
+  background: no-repeat url(../../../public/img/chienNeige.jpg) center/cover;
+  padding: 1rem 0 10rem;
+  h1 {
+    text-align: center;
+    padding-top: 13rem;
+    color: rgb(0, 0, 0);
+  }
+}
+
 #prestation {
   margin: 4rem 0;
   display: flex;

@@ -10,6 +10,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+use Vich\UploaderBundle\Form\Type\VichImageType;
+
 
 class PrestationCrudController extends AbstractCrudController
 {
@@ -25,15 +27,15 @@ class PrestationCrudController extends AbstractCrudController
             // IdField::new('id'),
             TextField::new('title', 'Titre'),
             TextEditorField::new('resume', 'résumé'),
+            TextEditorField::new('subtitle', 'sous-titre'),
             TextEditorField::new('description', 'description'), 
+            TextEditorField::new('subtitleOption', 'sous-titre 2'),
+            TextEditorField::new('descriptionOption', 'description 2'), 
             NumberField::new('price', 'prix'),
             TextField::new('duration', 'durée'),
             DateField::new('createdAt', 'date de création'),
-            ImageField::new('image', 'Image')
-                                                ->setBasePath('uploads/')
-                                                ->setUploadDir('public/uploads/img')
-                                                ->setUploadedFileNamePattern('[name][randomhash].[extension]')
-                                                ->setRequired(true),
+            TextField::new('imageFile')->setFormType(VichImageType::class),
+            ImageField::new('image', 'Image')->setBasePath('uploads/')->onlyOnIndex(),
         ];
     }
     

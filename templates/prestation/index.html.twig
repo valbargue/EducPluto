@@ -7,7 +7,7 @@
 
 {% block body %}
 	<main>
-		<div class="banner">
+		<div class="banner-prestation">
 			<h1>Prestation</h1>
 		</div>
 		<section id="prestation">
@@ -20,12 +20,12 @@
 						<div class="card-prestation col-lg-3 col-md-6 col-12">
 							<div class="card-content">
 								<div class="img-prestation">
-									<img src="{{ asset('/uploads/img/') }}{{prestation.image}}" alt="photo illustrant la prestation">
+									<img src="{{ asset('/uploads/') }}{{prestation.image}}" alt="photo illustrant la prestation">
 								</div>
 								<h3 class="title-prestation">{{ prestation.title }}</h3>
 								<p class="resume-prestation">{{ prestation.resume|raw }}</p>
 								{# <a class="btn-show" href="#">Voir détail</a> #}
-                                <a href="#">Voir détail</a>
+                                <a href="{{ path('prestation_show', { id: prestation.id}) }}">Voir détail</a>
 							</div>
 						</div>
 					{% endfor %}

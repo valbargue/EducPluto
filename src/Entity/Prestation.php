@@ -6,9 +6,13 @@ use App\Repository\PrestationRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PrestationRepository::class)
+ * @Vich\Uploadable
  */
 class Prestation
 {
@@ -51,9 +55,40 @@ class Prestation
     private $resume;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image;
+
+    /**
+     * 
+     * @Vich\UploadableField(mapping="imagesEducPluto", fileNameProperty="image")
+     * @Assert\File(
+     *      maxSize="2048k", 
+     *      maxSizeMessage="Veuillez choisir un taille inférieur à 2mo")
+     * 
+     * @var File
+     */
+    private $imageFile;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $subtitle;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $subtitleOption;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $descriptionOption;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $upadtedAt;
 
 
     public function getId(): ?int
@@ -140,9 +175,76 @@ class Prestation
         return $this->image;
     }
 
-    public function setImage(string $image): self
+    public function setImage(?string $image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    public function setImageFile(?File $imageFile = null): void {
+        $this->imageFile = $imageFile;
+
+        if (null !== $imageFile) {
+            // It is required that at least one field changes if you are using doctrine
+            // otherwise the event listeners won't be called and the file is lost
+            $this->upadtedAt = new \DateTime('now');
+
+     }
+        // if($this->imageFile instanceof ImageFile) {
+        //     $this->updatedAt = new \DateTime('now');
+        // }
+    }
+
+    public function getImageFile(): ?File {
+        return $this->imageFile;
+    }
+
+
+    public function getSubtitle(): ?string
+    {
+        return $this->subtitle;
+    }
+
+    public function setSubtitle(string $subtitle): self
+    {
+        $this->subtitle = $subtitle;
+
+        return $this;
+    }
+
+    public function getSubtitleOption(): ?string
+    {
+        return $this->subtitleOption;
+    }
+
+    public function setSubtitleOption(?string $subtitleOption): self
+    {
+        $this->subtitleOption = $subtitleOption;
+
+        return $this;
+    }
+
+    public function getDescriptionOption(): ?string
+    {
+        return $this->descriptionOption;
+    }
+
+    public function setDescriptionOption(?string $descriptionOption): self
+    {
+        $this->descriptionOption = $descriptionOption;
+
+        return $this;
+    }
+
+    public function getUpadtedAt(): ?\DateTimeInterface
+    {
+        return $this->upadtedAt;
+    }
+
+    public function setUpadtedAt(?\DateTimeInterface $upadtedAt): self
+    {
+        $this->upadtedAt = $upadtedAt;
 
         return $this;
     }

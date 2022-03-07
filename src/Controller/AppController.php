@@ -16,12 +16,6 @@ class AppController extends AbstractController {
     }
 
     /**
-     * @Route("/prestation", name="app_prestation")
-     */
-    public function prestation(): Response {
-        return $this->render('app/prestation.html.twig');
-    }
-    /**
      * @Route("/blog", name="app_blog")
      */
     public function blog(): Response {

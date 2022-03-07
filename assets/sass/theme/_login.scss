@@ -9,21 +9,6 @@
         margin-left: auto;
         margin-right: auto;
     }
-
-    button {
-        margin: 2rem;
-        border-radius: 14px;
-        background-color: $primary-color;
-        border: none;
-
-        &:hover {
-            background-color: $btn-hover;
-        }
-
-        &:active {
-            background-color: $btn-hover;
-        }
-    }
     input {
         width: 350px;
         // max-width: 350px;

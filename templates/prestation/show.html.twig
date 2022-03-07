@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{ prestation.title}}
+	{{parent()}}
+
+	{% block body %}
+
+		<main>
+			<section>
+				<style>
+					.bannerPrestaShow {
+						background-image: url({{asset("/uploads/" ~ prestation.image) }})
+					}
+				</style>
+				<div class="bannerPrestaShow">
+					<h1>{{ prestation.title}}</h1>
+				</div>
+			</section>
+			<section id="content-prestation">
+				<div class="content-prestation">
+					<div class="subtitle-showPrestation">{{prestation.subtitle | raw}}</div>
+					<div class="description-showPrestation">{{prestation.description | raw}}</div>
+
+					{% if prestation.subtitleOption and prestation.descriptionOption %}
+						<div class="subtitle-showPrestation">{{prestation.subtitleOption | raw}}</div>
+						<div class="description-showPrestation">{{prestation.descriptionOption | raw}}</div>
+					{% endif %}
+					<div class="price-showPrestation">La séance est de
+						{{prestation.price | raw}}€</div>
+					<div class="price-showPrestation">La durée de la séance est de
+						{{prestation.duration | raw}}</div>
+					<a href="#" class="btn-rdv">Prendre RDV</a>
+				</div>
+			</section>
+		</main>
+	{% endblock %}
+
+{% endblock %}
