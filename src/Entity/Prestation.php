@@ -12,6 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=PrestationRepository::class)
+ * @ORM\HasLifecycleCallbacks()
  * @Vich\Uploadable
  */
 class Prestation
@@ -118,11 +119,12 @@ class Prestation
         return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $createdAt): self
+     /**
+     * @ORM\PrePersist
+     */
+    public function setCreatedAtValue(): void
     {
-        $this->createdAt = $createdAt;
-
-        return $this;
+        $this->createdAt = new \DateTimeImmutable();
     }
 
     public function getPrice(): ?float

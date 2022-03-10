@@ -22,10 +22,6 @@
 					<div class="subtitle-showPrestation">{{prestation.subtitle | raw}}</div>
 					<div class="description-showPrestation">{{prestation.description | raw}}</div>
 
-					{% if prestation.subtitleOption and prestation.descriptionOption %}
-						<div class="subtitle-showPrestation">{{prestation.subtitleOption | raw}}</div>
-						<div class="description-showPrestation">{{prestation.descriptionOption | raw}}</div>
-					{% endif %}
 					<div class="price-showPrestation">La séance est de
 						{{prestation.price | raw}}€</div>
 					<div class="price-showPrestation">La durée de la séance est de

@@ -7,6 +7,7 @@ use DateTime;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\MoneyField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\NumberField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
@@ -24,16 +25,12 @@ class PrestationCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
-            // IdField::new('id'),
             TextField::new('title', 'Titre'),
             TextEditorField::new('resume', 'résumé'),
             TextEditorField::new('subtitle', 'sous-titre'),
             TextEditorField::new('description', 'description'), 
-            TextEditorField::new('subtitleOption', 'sous-titre 2'),
-            TextEditorField::new('descriptionOption', 'description 2'), 
-            NumberField::new('price', 'prix'),
+            MoneyField::new('price', 'prix')->setCurrency('EUR'),
             TextField::new('duration', 'durée'),
-            DateField::new('createdAt', 'date de création'),
             TextField::new('imageFile')->setFormType(VichImageType::class),
             ImageField::new('image', 'Image')->setBasePath('uploads/')->onlyOnIndex(),
         ];
