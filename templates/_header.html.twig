@@ -1,19 +1,20 @@
 <header>
-	{# <div class="bando">
-		<p>Me contacter  par téléphone au 06 04 41 44 14 ou par e-mail à contact@educpluto.com
-		</p>
-	</div> #}
-	<div class="nav-blur">
-		<nav>
-			<div class="logo-header">
-				<img src=" {{ asset('/img/logo.jpeg') }}" alt="logo du site">
-			</div>
-			<a href="{{ path('app_index') }}">Accueil</a>
-			<a href="{{ path('prestation_index') }}">Prestation</a>
-			<a href="{{ path('app_blog') }}">Blog</a>
-			<a href="{{ path('app_rdv') }}">Prendre RDV</a>
-		</nav>
+	<div class="logo">
+		<img src=" {{ asset('/img/logo.jpeg') }}" alt="logo du site">
 	</div>
-
+	<nav>
+		<a href="#" class="toggle-button">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</a>
+		<div class="navbar-link link-wrapper">
+			<ul>
+				<li><a class="link hover-6" href="{{path('app_index')}}">Accueil</a></li>
+				<li><a class="link hover-6" href="{{path('prestation_index')}}">Prestation</a></li>
+				<li><a class="link hover-6" href="{{path('app_blog')}}">Blog</a></li>
+				<li><a class="link hover-6" href="{{path('app_rdv')}}">Prendre RDV</a></li>
+			</ul>
+		</div>
+	</nav>
 </header>
-

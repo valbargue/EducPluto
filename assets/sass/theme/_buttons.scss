@@ -28,3 +28,13 @@
         background-color: $btn-hover;
     }
 }
+
+button {
+    background-color: $primary-color !important;
+    border: $primary-color !important;
+    &:hover {
+        color: white !important;
+        background-color: $btn-hover !important;
+    }
+}
+

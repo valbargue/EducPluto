@@ -17,7 +17,7 @@
 			<div class="container">
 				<div class="row justify-content-md-center justify-content-center">
 					{% for prestation in prestations %}
-						<div class="card-prestation col-lg-3 col-md-6 col-12">
+						<div class="card-prestation col-lg-3 col-md-6 col-6">
 							<div class="card-content">
 								<div class="img-prestation">
 									<img src="{{ asset('/uploads/') }}{{prestation.image}}" alt="photo illustrant la prestation">
@@ -25,7 +25,7 @@
 								<h3 class="title-prestation">{{ prestation.title }}</h3>
 								<p class="resume-prestation">{{ prestation.resume|raw }}</p>
 								{# <a class="btn-show" href="#">Voir détail</a> #}
-                                <a href="{{ path('prestation_show', { id: prestation.id}) }}">Voir détail</a>
+								<a href="{{ path('prestation_show', { id: prestation.id}) }}">Voir détail</a>
 							</div>
 						</div>
 					{% endfor %}

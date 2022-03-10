@@ -1,55 +1,135 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Accueil {{parent()}}{% endblock %}
+{% block title %}
+	Accueil
+	{{parent()}}
+{% endblock %}
 
 {% block body %}
-    <main>
-        <div class="banner-header"></div>    
-        <section id="about-me">
-            <div class="top-index">
-                <h1>Bienvue chez <br><span class="font-green">Educ Pluto</span> !</h1>        
-            </div>
-            <div class="container-index">
-                <div class="content">
-                    <h3>Qui suis-je</h3> 
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>           
-                </div>
-                <div class="img-content">
-                    <img src="{{ asset('/img/contact.jpg') }}" alt="image de la section qui suis-je">
-                </div>
-            </div>            
-        </section>
-        <section id="methodes">
-            <div class="methodes">
-                <h2>Ma méthode en <br><span class="font-green">3 points</span></h2>
-            </div>
-            <div class="container-index">
-                <div class="img-content">
-                    <img src="{{ asset('/img/chienNeige.jpg') }}" alt="image de la section qui suis-je">
-                </div>
-                <div class="content">
-                    <h3>Comprendre votre chien</h3> 
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>           
-                </div>
-            </div>        
-            <div class="container-index">
-                <div class="content">
-                    <h3>Être à votre écoute</h3> 
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>           
-                </div>
-                <div class="img-content">
-                    <img src="{{ asset('/img/aLecoute.jpg') }}" alt="image de la section qui suis-je">
-                </div>
-            </div>        
-            <div class="container-index">
-                <div class="img-content">
-                    <img src="{{ asset('/img/chienLaisse.jpg') }}" alt="image de la section qui suis-je">
-                </div>
-                <div class="content">
-                    <h3>Analize personnalisée</h3> 
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>           
-                </div>
-            </div>        
-        </section>
-    </main>
+	<main>
+		<div class="banner-header"></div>
+		<section id="about-me">
+			<div class="top-index">
+				<h1>Bienvenue chez
+					<br><span class="font-green">Educ Pluto</span>
+					!</h1>
+			</div>
+			<div class="container-index">
+				<div class="content">
+					<h3>Qui suis-je</h3>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>
+				</div>
+				<div class="img-content">
+					<img src="{{ asset('/img/contact.jpg') }}" alt="image de la section qui suis-je">
+				</div>
+			</div>
+		</section>
+		<section id="methodes">
+			<div class="methodes">
+				<h2>Ma méthode en
+					<br><span class="font-green">3 points</span>
+				</h2>
+			</div>
+			<div class="container-index">
+				<div class="img-content">
+					<img src="{{ asset('/img/chienNeige.jpg') }}" alt="image de la section qui suis-je">
+				</div>
+				<div class="content">
+					<h3>Comprendre votre chien</h3>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>
+				</div>
+			</div>
+			<div class="container-index">
+				<div class="content">
+					<h3>Être à votre écoute</h3>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>
+				</div>
+				<div class="img-content">
+					<img src="{{ asset('/img/aLecoute.jpg') }}" alt="image de la section qui suis-je">
+				</div>
+			</div>
+			<div class="container-index">
+				<div class="img-content">
+					<img src="{{ asset('/img/chienLaisse.jpg') }}" alt="image de la section qui suis-je">
+				</div>
+				<div class="content">
+					<h3>Analize personnalisée</h3>
+					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, deserunt nisi? Non distinctio recusandae voluptate quae hic doloribus perspiciatis pariatur nesciunt nobis earum numquam ducimus explicabo, neque sit, officiis dignissimos? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis eveniet facere iste ipsum blanditiis similique. Eveniet voluptatem quas, fugiat incidunt eos unde odio autem quos veritatis maxime fugit, a in!</p>
+				</div>
+			</div>
+		</section>
+		<section id="parallax">
+			<div class="para-banner"></div>
+		</section>
+		<section id="prestation">
+			<h2>Découvrez les différentes
+				<br><span class="font-green">préstations proposées</span>
+			</h2>
+			<div class="container main-prestation">
+				<div class="row justify-content-md-center justify-content-center">
+					{% for prestation in prestations %}
+						<div class="card-prestation col-lg-3 col-md-6 col-6">
+							<div class="card-content">
+								<div class="img-prestation">
+									<img src="{{ asset('/uploads/') }}{{prestation.image}}" alt="photo illustrant la prestation">
+								</div>
+								<h3 class="title-prestation">{{ prestation.title }}</h3>
+								<p class="resume-prestation">{{ prestation.resume|raw }}</p>
+								<a href="{{ path('prestation_show', { id: prestation.id}) }}">Voir détail</a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+				<a href="{{path('prestation_index')}}" class="btn-rdv show-prestation">Voir tout</a>
+			</div>
+		</section>
+		<section id="avis">
+			<h2>Ils nous ont fait
+				<br><span class="font-green">confiance !</span>
+			</h2>
+			<div class="swiper mySwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide avis-card">
+						<div class="avis-content">
+							<h4>Emma</h4>
+							<p>Éducatrice très à l'écoute et passionnée. M'a donné des conseils faciles et pratiques a réaliser avec ma chienne de 5ans, Kira.	Elle n'a pas pu m'aider pour l'agressivité avec congénères mais m'a conseillé et recommandé un autre spécialiste. Je recommande !</p>
+						</div>
+					</div>
+					<div class="swiper-slide avis-card">
+						<div class="avis-content">
+							<h4>Cyril</h4>
+							<p>Éducatrice très à l'écoute et passionnée. M'a donné des conseils faciles et pratiques a réaliser avec ma chienne de 5ans, Kira.	Elle n'a pas pu m'aider pour l'agressivité avec congénères mais m'a conseillé et recommandé un autre spécialiste. Je recommande !</p>
+						</div>
+					</div>
+					<div class="swiper-slide avis-card">
+						<div class="avis-content">
+						<h4>Thibaud</h4>
+							<p>Éducatrice très à l'écoute et passionnée. M'a donné des conseils faciles et pratiques a réaliser avec ma chienne de 5ans, Kira.	Elle n'a pas pu m'aider pour l'agressivité avec congénères mais m'a conseillé et recommandé un autre spécialiste. Je recommande !</p>
+						</div>
+					</div>
+					<div class="swiper-slide avis-card">
+						<div class="avis-content">
+						<h4>valentin</h4>
+							<p>Éducatrice très à l'écoute et passionnée. M'a donné des conseils faciles et pratiques a réaliser avec ma chienne de 5ans, Kira.	Elle n'a pas pu m'aider pour l'agressivité avec congénères mais m'a conseillé et recommandé un autre spécialiste. Je recommande !</p>
+						</div>
+					</div>
+					<div class="swiper-slide avis-card">
+						<div class="avis-content">
+						<h4>Jordy</h4>
+							<p>Éducatrice très à l'écoute et passionnée. M'a donné des conseils faciles et pratiques a réaliser avec ma chienne de 5ans, Kira.	Elle n'a pas pu m'aider pour l'agressivité avec congénères mais m'a conseillé et recommandé un autre spécialiste. Je recommande !</p>
+						</div>
+					</div>
+					<div class="swiper-slide avis-card">
+						<div class="avis-content">
+							<h4>Célia</h4>
+							<p>Éducatrice très à l'écoute et passionnée. M'a donné des conseils faciles et pratiques a réaliser avec ma chienne de 5ans, Kira.	Elle n'a pas pu m'aider pour l'agressivité avec congénères mais m'a conseillé et recommandé un autre spécialiste. Je recommande !</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</section>
+	</main>
 {% endblock %}

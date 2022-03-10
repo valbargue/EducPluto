@@ -1,34 +1,140 @@
 header {
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.6s;
+  padding: 10px 50px;
+  background: rgba($color: #fff, $alpha: 0.4);
+  z-index: 100000;
 
+  .logo {
+    position: relative;
+    right: 50px;
+    transition: all 0.6s;
+    height: 120px;
 
-  .nav-blur {
-    //   filter: blur(2px);
-    nav {
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    @media screen and (max-width: 888px) {
+      left: 10px;
+    }
+  }
+  .toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+    @media (max-width: 888px) {
       display: flex;
-      align-items: center;
+    }
+
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: $primary-color;
+      border-radius: 10px;
+    }
+  }
+
+  .navbar-link {
+    ul {
+      position: relative;
+      display: flex;
       justify-content: center;
-      gap: 3rem;
-      background-color: rgba($color: #fff, $alpha: 0.5);
+      align-items: center;
 
-      .logo-header {
-        height: 200px;
+      li {
+        position: relative;
+        list-style: none;
 
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: contain;
+        a {
+          position: relative;
+          margin: 0 15px;
+          text-decoration: none;
+          color: $primary-color;
+          letter-spacing: 2px;
+          transition: 0.6s;
+          font-family: $font-title;
+          font-size: $nav-height;
+          text-transform: uppercase;
+          font-weight: 500;
         }
       }
+    }
+    @media screen and (max-width: 888px) {
+      display: none;
 
-      a {
-        font-size: $nav-height;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: black;
-        font-family: $font-title;
+      &.active {
+        display: flex;
+        ul {
+          flex-direction: column;
+        }
       }
     }
   }
+  @media screen and (max-width: 888px) {
+    flex-direction: column;
+  }
+}
+header.sticky {
+  background: #fff;
+  padding: 0;
+}
+.link-wrapper {
+  position: relative;
+  display: block;
+  padding: 20px 0;
+
+  .hover-6 {
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 50%;
+        height: 3px;
+        background-color: $primary-color;
+        transform: scaleX(0);
+        transform-origin: bottom left;
+
+        transition: transform 0.3s;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left : 50%;
+        height: 3px;
+        background-color: $primary-color;
+        transform: scaleX(0);
+        transform-origin: bottom right;
+
+        transition: transform 0.3s;
+    }
+
+    &:hover {
+        &:before {
+            transform: scaleX(1);
+        }
+
+        &:after {
+            transform: scaleX(1);
+        }
+    }
+}
+
 }

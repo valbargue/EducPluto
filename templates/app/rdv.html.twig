@@ -7,8 +7,35 @@
 
 {% block body %}
 	<main>
-		<div class="banner">
+		<div class="banner-rdv">
 			<h1>Prendre rendez-vous</h1>
 		</div>
+		<section id="contact">
+			<div class="rdv-content">
+				<div class="top-page-contact">
+					<p>Besoin d’un renseignement ou d’une  réponse à vos questions ? Ou vous souhaitez tout simplement prendre contact pour un rendez-vous ou pour faire connaissance ? N’hésitez pas à nous contacter via le formulaire ci-contre, ou directement depuis votre boîte mail.</p>
+				</div>
+				<div class="form-rdv">
+					{{ form_start(form) }}
+					{{ form_errors(form) }}
+					{{ form_row(form.lastname) }}
+					{{ form_row(form.mail) }}
+					{{ form_row(form.object) }}
+					{{ form_row(form.message) }}
+					<div class="flex">
+						{{ form_widget(form.agreeTerms) }}
+						<label for="">J'accepte la
+							<a href="https://www.google.com">politique de confidentialité</a>
+						</label>
+					</div>
+					{{ form_end(form) }}
+				</div>
+				<div class="maps">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448.3416398035851!2d-0.7753841231765146!3d44.83848917525173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd54c5689ccdea07%3A0x2f40096a073842ae!2s3%20Rue%20Alexander%20Fleming%2C%2033127%20Martignas-sur-Jalle!5e1!3m2!1sfr!2sfr!4v1646747825596!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+				</div>
+			</div>
+
+		</section>
+
 	</main>
 {% endblock %}

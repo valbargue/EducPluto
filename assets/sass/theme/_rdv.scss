@@ -1,0 +1,44 @@
+.banner-rdv {
+  background: no-repeat url(../../../public/img/bannerContact.jpg) center/cover;
+  padding: 1rem 0 10rem;
+  h1 {
+    text-align: center;
+    padding-top: 13rem;
+    color: rgb(255, 255, 255);
+  }
+}
+
+#contact {
+  margin: 4rem 0;
+
+  .rdv-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    .top-page-contact {
+      width: 50%;
+      min-width: 300px;
+      max-width: 600px;
+      p {
+        text-align: center;
+      }
+    }
+
+    .form-rdv {
+      width: 50%;
+      min-width: 300px;
+      max-width: 600px;
+
+      .flex {
+        display: flex;
+      }
+    }
+
+    .maps {
+        width: 100%;
+        text-align: center;
+    }
+  }
+}

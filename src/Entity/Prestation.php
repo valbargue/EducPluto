@@ -75,15 +75,6 @@ class Prestation
      */
     private $subtitle;
 
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $subtitleOption;
-
-    /**
-     * @ORM\Column(type="text", nullable=true)
-     */
-    private $descriptionOption;
 
     /**
      * @ORM\Column(type="datetime", nullable=true)
@@ -209,30 +200,6 @@ class Prestation
     public function setSubtitle(string $subtitle): self
     {
         $this->subtitle = $subtitle;
-
-        return $this;
-    }
-
-    public function getSubtitleOption(): ?string
-    {
-        return $this->subtitleOption;
-    }
-
-    public function setSubtitleOption(?string $subtitleOption): self
-    {
-        $this->subtitleOption = $subtitleOption;
-
-        return $this;
-    }
-
-    public function getDescriptionOption(): ?string
-    {
-        return $this->descriptionOption;
-    }
-
-    public function setDescriptionOption(?string $descriptionOption): self
-    {
-        $this->descriptionOption = $descriptionOption;
 
         return $this;
     }

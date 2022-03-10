@@ -1,25 +1,23 @@
 footer {
-    padding: 2rem 0;
-    background-color: $primary-color;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+  padding: 2rem 0;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 
-    p {
-        text-align: center;
+  p {
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+    margin: 0 !important;
+
+    a {
+      color: black;
+      text-decoration: none;
+      transition: color 0.3s;
+      &:hover {
         color: #fff;
-        display: inline-block;
-        margin: 0!important;
-
-        a {
-            color: black;
-            text-decoration: none;
-
-            &:hover {
-                color: #fff;
-                transition: color .3s;
-            }
-        }
+      }
     }
-
+  }
 }
